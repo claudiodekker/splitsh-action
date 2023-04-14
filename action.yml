@@ -1,0 +1,33 @@
+name: 'Splitsh Lite Action'
+description: 'Automatically synchronize monolithic repositories to standalone repositories'
+
+author: Claudio Dekker <claudio@ubient.net>
+
+inputs:
+  prefix:
+    required: true
+    description: 'The directory of the repository that you want to split'
+  remote:
+    required: true
+    description: 'The .git repository to push the split to'
+  reference:
+    required: false
+    description: 'The branch or tag to push the split repository to'
+    default: 'main'
+  as_tag:
+    required: false
+    description: 'Whether the reference should be a tag instead of a branch'
+    default: 'false'
+
+branding:
+  icon: 'git-branch'
+  color: 'gray-dark'
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/claudiodekker/splitsh-action:latest'
+  args:
+    - ${{ inputs.prefix }}
+    - ${{ inputs.remote }}
+    - ${{ inputs.reference }}
+    - ${{ inputs.as_tag }}
