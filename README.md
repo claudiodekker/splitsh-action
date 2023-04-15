@@ -35,7 +35,7 @@ A Github Action that allows you to split your monorepo into multiple repositorie
              fetch-depth: 0
    
          - name: Split package ${{ matrix.package }}
-           uses: "claudiodekker/splitsh-action@1.0.0"
+           uses: "claudiodekker/splitsh-action@v1.0.0"
            env:
              GITHUB_TOKEN: ${{ secrets.MONOREPO_SPLITTER_PERSONAL_ACCESS_TOKEN }}
            with:
