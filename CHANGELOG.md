@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/claudiodekker/splitsh-action/compare/v1.0.0...HEAD)
 
+### Fixed
+
+- Fix v1.0.0 reference in README.md ([#1](https://github.com/claudiodekker/splitsh-action/pull/1))
+
+
 ## [v1.0.0](https://github.com/claudiodekker/splitsh-action/releases/tag/v1.0.0) - 2023-04-15
 
 ### Added
